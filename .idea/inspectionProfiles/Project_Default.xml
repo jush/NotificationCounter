@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PrivateMemberAccessBetweenOuterAndInnerClass" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <searchConfiguration name="Missing onError handling" text="$instance$.subscribe($args$)" recursive="true" caseInsensitive="true" type="JAVA">
+        <constraint name="__context__" target="true" within="" contains="" />
+        <constraint name="instance" nameOfExprType="(rx.Observable|rx.Single)" exprTypeWithinHierarchy="true" within="" contains="" />
+        <constraint name="args" nameOfExprType="Action1" exprTypeWithinHierarchy="true" within="" contains="" />
+      </searchConfiguration>
+      <searchConfiguration name="Empty onError" text="new Subscriber&lt;$type$&gt;() {&#10;    @Override&#10;    public void onError(Throwable e) {}&#10;}" recursive="false" caseInsensitive="true" type="JAVA">
+        <constraint name="type" within="" contains="" />
+      </searchConfiguration>
+    </inspection_tool>
+  </profile>
+</component>
